@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubscriptionViewController">
+            <connections>
+                <outlet property="blankLabel" destination="boO-Hs-gKY" id="UWl-pd-YtQ"/>
+                <outlet property="myTableView" destination="p0y-Zy-Tfx" id="RFm-Q0-L4b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="p0y-Zy-Tfx">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Lsj-JV-yKY"/>
+                        <outlet property="delegate" destination="-1" id="QvX-MB-0Ka"/>
+                    </connections>
+                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any active packages." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boO-Hs-gKY" customClass="CustomRegularLabel">
+                    <rect key="frame" x="175" y="282" width="250" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Dzg-7T-nSl"/>
+                        <constraint firstAttribute="width" constant="250" id="w6z-kk-mxa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="p0y-Zy-Tfx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="iD0-2L-4PY"/>
+                <constraint firstAttribute="trailing" secondItem="p0y-Zy-Tfx" secondAttribute="trailing" id="jf9-WF-zkk"/>
+                <constraint firstItem="boO-Hs-gKY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jvU-sr-TbH"/>
+                <constraint firstAttribute="bottom" secondItem="p0y-Zy-Tfx" secondAttribute="bottom" id="lqO-6D-Y3B"/>
+                <constraint firstItem="p0y-Zy-Tfx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pwP-w1-LB9"/>
+                <constraint firstItem="boO-Hs-gKY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="32" id="uhW-vv-czr"/>
+            </constraints>
+        </view>
+        <view contentMode="scaleToFill" id="nw0-mu-vOK">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subscription active" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-jH-1sM">
+                    <rect key="frame" x="10" y="8" width="180" height="20"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHK-a5-7sQ">
+                    <rect key="frame" x="257" y="8" width="50" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="6q9-5b-dB8"/>
+                        <constraint firstAttribute="height" constant="20" id="P7w-K4-rKl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="bHK-a5-7sQ" secondAttribute="centerY" constant="-0.5" id="ZFn-ht-MRg"/>
+                <constraint firstAttribute="trailing" secondItem="bHK-a5-7sQ" secondAttribute="trailing" constant="13" id="uCZ-be-cjk"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="255" y="906.5"/>
+        </view>
+    </objects>
+</document>

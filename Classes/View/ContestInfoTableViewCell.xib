@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContestInfoTableViewCell" rowHeight="205" id="KGk-i7-Jjw" customClass="ContestInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="239"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muse-Starlight live in Moscow  Theatre asdadasd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaR-Aa-KQJ" customClass="CustomBoldLabel">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="4DU-Ph-MFi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="0.15056313574314117" green="0.15055863559246063" blue="0.15056121349334717" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Mar 2016 - 10:00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9m-t6-jb1" customClass="CustomSemiBoldLabel">
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="psm-Rp-d3E"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="11"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF1-TV-3tA" customClass="CustomBoldLabel">
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.80000000000000004" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="AUW-IG-8lE"/>
+                            <constraint firstAttribute="height" constant="20" id="dmb-gR-tzT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="8"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmZ-Cd-qo7" customClass="CustomRegularLabel">
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="85" id="mk5-fA-I9p"/>
+                        </constraints>
+                        <string key="text">Muse- Evil Twin. Video directed by Focus Creeps. Exclusive b-side available on 7" vinyl &amp; Mp3 Digital Download on Monday 31st October via http://www.arcticmonkeys-store.co.uk
+TAMPILKAN LEBIH BANYAK</string>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otK-XW-mcG" userLabel="footer">
+                        <color key="backgroundColor" red="0.90212953090667725" green="0.90210258960723877" blue="0.90211784839630127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="5eG-9z-ydS"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="kfM-Ld-7TY">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="FaO-D0-6jE"/>
+                            <constraint firstAttribute="width" constant="40" id="rod-Tg-7lH"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSS-x1-KgR" userLabel="SwipeView" customClass="SwipeView">
+                        <color key="backgroundColor" red="0.90212953090667725" green="0.90210258960723877" blue="0.90211784839630127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="k04-BJ-hy7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HmZ-Cd-qo7" firstAttribute="top" secondItem="JF1-TV-3tA" secondAttribute="bottom" constant="4" id="7V6-TC-mnw"/>
+                    <constraint firstItem="HmZ-Cd-qo7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="A1H-jw-Bu3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kfM-Ld-7TY" secondAttribute="trailing" constant="-8" id="Cmh-2l-Oqf"/>
+                    <constraint firstItem="JF1-TV-3tA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="Js3-i4-bLP"/>
+                    <constraint firstItem="kfM-Ld-7TY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="KEE-kp-Rlr"/>
+                    <constraint firstItem="otK-XW-mcG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="PRA-Ml-QrR"/>
+                    <constraint firstItem="i9m-t6-jb1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="T1s-aP-ypu"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CSS-x1-KgR" secondAttribute="trailing" constant="-8" id="WGn-CS-Vrx"/>
+                    <constraint firstItem="i9m-t6-jb1" firstAttribute="top" secondItem="DaR-Aa-KQJ" secondAttribute="bottom" constant="-3" id="XDi-jw-E9J"/>
+                    <constraint firstItem="DaR-Aa-KQJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="YW9-yw-AZP"/>
+                    <constraint firstItem="otK-XW-mcG" firstAttribute="top" secondItem="HmZ-Cd-qo7" secondAttribute="bottom" constant="2" id="eso-nm-FKx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DaR-Aa-KQJ" secondAttribute="trailing" constant="22" id="gbD-7t-YCA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="i9m-t6-jb1" secondAttribute="trailing" constant="2" id="ggF-WP-BGR"/>
+                    <constraint firstItem="JF1-TV-3tA" firstAttribute="top" secondItem="i9m-t6-jb1" secondAttribute="bottom" constant="1" id="gmE-t7-MiL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HmZ-Cd-qo7" secondAttribute="trailing" constant="2" id="iny-16-9aa"/>
+                    <constraint firstItem="CSS-x1-KgR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="jYt-CV-3O4"/>
+                    <constraint firstItem="DaR-Aa-KQJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="pR0-PL-lgv"/>
+                    <constraint firstItem="CSS-x1-KgR" firstAttribute="top" secondItem="otK-XW-mcG" secondAttribute="bottom" constant="-1" id="rUW-37-MxE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="otK-XW-mcG" secondAttribute="trailing" constant="-8" id="v0s-uk-ENp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="dateLabel" destination="i9m-t6-jb1" id="urA-gF-MxP"/>
+                <outlet property="descHeightConstraint" destination="mk5-fA-I9p" id="s7b-Ob-LGs"/>
+                <outlet property="descLabel" destination="HmZ-Cd-qo7" id="ar6-Dh-WHt"/>
+                <outlet property="downArrow" destination="kfM-Ld-7TY" id="oIx-JU-jvz"/>
+                <outlet property="headerMenu" destination="CSS-x1-KgR" id="k9i-8j-I7L"/>
+                <outlet property="statusLabel" destination="JF1-TV-3tA" id="7Jv-eM-iBg"/>
+                <outlet property="statusWidthConstraint" destination="AUW-IG-8lE" id="ff0-14-Djw"/>
+                <outlet property="titleHeightConstraint" destination="4DU-Ph-MFi" id="OkP-hy-ybB"/>
+                <outlet property="titleLabel" destination="DaR-Aa-KQJ" id="Uve-qd-8EE"/>
+            </connections>
+            <point key="canvasLocation" x="239" y="100.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="downArrow" width="11" height="5"/>
+    </resources>
+</document>

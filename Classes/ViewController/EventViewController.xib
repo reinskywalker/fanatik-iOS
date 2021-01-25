@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventViewController">
+            <connections>
+                <outlet property="blankLabel" destination="1s9-V6-sQq" id="ShR-1M-04k"/>
+                <outlet property="myTableView" destination="bhn-RO-aeB" id="01M-dx-gyo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-RO-aeB">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="C3K-DI-O0a"/>
+                        <outlet property="delegate" destination="-1" id="NEm-vQ-vGQ"/>
+                    </connections>
+                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There's no live chat right now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-V6-sQq" customClass="CustomRegularLabel">
+                    <rect key="frame" x="175" y="250" width="250" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="GZN-uU-RR7"/>
+                        <constraint firstAttribute="width" constant="250" id="J4Z-6F-Lxm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bhn-RO-aeB" secondAttribute="bottom" id="KSu-2k-09s"/>
+                <constraint firstAttribute="trailing" secondItem="bhn-RO-aeB" secondAttribute="trailing" id="L5G-hT-CYr"/>
+                <constraint firstItem="1s9-V6-sQq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="VwX-T7-25g"/>
+                <constraint firstItem="bhn-RO-aeB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nvH-ou-hqT"/>
+                <constraint firstItem="1s9-V6-sQq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uWU-DX-ysa"/>
+                <constraint firstItem="bhn-RO-aeB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="yQt-A7-UNm"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

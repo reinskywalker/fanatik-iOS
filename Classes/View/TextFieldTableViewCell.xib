@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldTableViewCell" rowHeight="58" id="KGk-i7-Jjw" customClass="TextFieldTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nama Panjenengan" minimumFontSize="11" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="E2Q-zc-8C2">
+                        <rect key="frame" x="18" y="26" width="284" height="28"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="1IS-Ej-xoR"/>
+                        </connections>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlS-bA-ZEL" customClass="CustomSemiBoldLabel">
+                        <rect key="frame" x="18" y="5" width="284" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="U6g-6D-MFb"/>
+                            <constraint firstAttribute="width" constant="284" id="Ywq-Fr-aEb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="13"/>
+                        <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="E2Q-zc-8C2" secondAttribute="bottom" constant="-5" id="EF3-J9-LhS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="E2Q-zc-8C2" secondAttribute="trailing" constant="10" id="U4N-6C-FQh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="BlS-bA-ZEL" secondAttribute="trailing" constant="10" id="fzw-gU-TbN"/>
+                    <constraint firstItem="BlS-bA-ZEL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="gBF-69-71C"/>
+                    <constraint firstItem="E2Q-zc-8C2" firstAttribute="top" secondItem="BlS-bA-ZEL" secondAttribute="bottom" id="hHM-rJ-E2Q"/>
+                    <constraint firstItem="E2Q-zc-8C2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="kUt-qp-GoB"/>
+                    <constraint firstItem="BlS-bA-ZEL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="qqI-D1-AdM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="myTextField" destination="E2Q-zc-8C2" id="2CK-TF-X8t"/>
+                <outlet property="textLabel" destination="BlS-bA-ZEL" id="Gbt-2d-d3w"/>
+            </connections>
+            <point key="canvasLocation" x="239" y="171"/>
+        </tableViewCell>
+    </objects>
+</document>

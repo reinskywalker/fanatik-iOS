@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>header_bg_color</key>
+	<string>FAC22DFF</string>
+	<key>header_text_color</key>
+	<string>5A5E2FFF</string>
+	<key>header_shadow_color</key>
+	<string>90A542E5</string>
+	<key>main_bg_color</key>
+	<string>EFFFCCFF</string>
+	<key>btn_text_color</key>
+	<string>FFFFFFFF</string>
+	<key>btn_font</key>
+	<string>Avenir-Light</string>
+	<key>default_font_regular</key>
+	<string>Open Sans</string>
+	<key>default_font_bold</key>
+	<string>OpenSans-Bold</string>
+	<key>default_font_semi_bold</key>
+	<string>OpenSans-Semibold</string>
+	<key>background_black_color</key>
+	<string>000000A7</string>
+	<key>background_yellow_color</key>
+	<string>F9CA4BFF</string>
+	<key>label_shadow_radius</key>
+	<integer>1</integer>
+	<key>label_shadow_opacity</key>
+	<real>0.4</real>
+	<key>label_shadow_color</key>
+	<string>000000FF</string>
+	<key>green_font_color</key>
+	<string>46CEADFF</string>
+	<key>border_color</key>
+	<string>E6E6E6FF</string>
+</dict>
+</plist>

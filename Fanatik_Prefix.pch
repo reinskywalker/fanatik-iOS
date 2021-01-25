@@ -1,0 +1,150 @@
+//
+//  Fanatik_Prefix.pch
+//  Fanatik
+//
+//  Created by Teguh Hidayatullah on 12/17/14.
+//  Copyright (c) 2014 Domikado. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#define Fanatik_Prefix_pch
+#define HEXCOLOR(c) [UIColor colorWithRed:((c>>24)&0xFF)/255.0 green:((c>>16)&0xFF)/255.0 blue:((c>>8)&0xFF)/255.0 alpha:((c)&0xFF)/255.0]
+#define IS_DEVICE_RUNNING_IOS_7_AND_ABOVE() ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending)
+#define iPhoneVersion ([[UIScreen mainScreen] bounds].size.height == 568 ? 5 : ([[UIScreen mainScreen] bounds].size.height == 480 ? 4 : ([[UIScreen mainScreen] bounds].size.height == 667 ? 6 : ([[UIScreen mainScreen] bounds].size.height == 736 ? 61 : 999))))
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+#define SYSTEM_VERSION                              [[UIDevice currentDevice] systemVersion]
+#define IS_IPAD     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+
+#import "Availability.h"
+#import <OHAttributedLabel/OHASBasicHTMLParser.h>
+#import <UIKit/UIKit.h>
+#import <SocketRocket/SRWebSocket.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import <QuartzCore/QuartzCore.h>
+#import "ParentViewController.h"
+#import "SettingsManager.h"
+#import "ServerManager.h"
+#import "ConstantsManager.h"
+#import "InterfaceManager.h"
+#import "RightMenuViewController.h"
+#import <RestKit/RestKit.h>
+#import "NSString+MD5.h"
+#import "RTLabel.h"
+#import <CoreText/CoreText.h>
+#import <DTCoreText.h>
+#import "iCarousel.h"
+#import "CustomRegularLabel.h"
+#import "CustomBoldLabel.h"
+#import "CustomSemiBoldLabel.h"
+#import "CustomMediumButton.h"
+#import "CustomSemiBoldButton.h"
+#import "CustomBoldButton.h"
+#import "SVBlurView.h"
+#import "UIView+SDCAutoLayout.h"
+#import "UIColor+hex.h"
+#import "Timeline+functionality.h"
+#import "Video+functionality.h"
+#import "ClipStats+functionality.h"
+#import "BroadcasterOnline.h"
+#import "User.h"
+#import "UserWrapper.h"
+#import "Socialization+functionality.h"
+#import "Clip.h"
+#import "Live+functionality.h"
+#import "Playlist+functionality.h"
+#import "Package+functionality.h"
+#import "Activity.h"
+#import "Activity+functionality.h"
+#import "Notification.h"
+#import "Avatar+functionality.h"
+#import "AvatarWrapper.h"
+
+#import "Thumbnail+functionality.h"
+
+#import "CoverImageWrapper.h"
+#import "CoverImage+functionality.h"
+#import "Pagination.h"
+
+#import "RowMenu+functionality.h"
+#import "SectionMenu+functionality.h"
+#import "SideMenu+functionality.h"
+#import "DebugMenuViewController.h"
+#import "UIViewController+REFrostedViewController.h"
+
+#import "CustomMediumTextField.h"
+#import "Comment.h"
+#import "UserStats+functionality.h"
+
+#import "ClipGroup.h"
+#import "LargeVideoTableViewCell.h"
+#import "VideoCommentHeaderCell.h"
+
+#import "VideoDetailViewController.h"
+#import "LiveChatDetailViewController.h"
+#import "EventDetailViewController.h"
+#import "CustomREFrostedViewController.h"
+#import "UIImage+UIColor.h"
+#import "NSString+size.h"
+#import "UIImage+resize.h"
+#import "PaginationModel.h"
+#import "UIScrollView+SVPullToRefresh.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
+#import "ProfileViewController.h"
+#import "UCZProgressView.h"
+#import "UIView+indicator.h"
+#import "Payment+functionality.h"
+#import "PaymentGroup+functionality.h"
+#import "NSDate-Utilities.h"
+#import "ClipCategory+functionality.h"
+#import "RowMenuParam+functionality.h"
+#import "IBActionSheet.h"
+#import "Shareable+functionality.h"
+#import "RowMenuModel.h"
+#import "Hls+functionality.h"
+#import "TVChannelDetailViewController.h"
+#import "Settings.h"
+#import "WebViewController.h"
+#import "Club+functionality.h"
+#import "ClubList+functionality.h"
+#import "ClubStats+functionality.h"
+#import "ClubMembership+functionality.h"
+#import "UserUploads+functionality.h"
+#import "UIAlertView+Blocks.h"
+#import "ClubProfileViewController.h"
+#import "Thread+functionality.h"
+#import "ThreadRestriction+functionality.h"
+#import "ThreadStats+functionality.h"
+#import "UITextView+Placeholder.h"
+#import "ThreadComment+functionality.h"
+#import "ThreadContent+functionality.h"
+#import "NSObject+DelayedBlock.h"
+#import "UIButton+WebCache.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "Actor+functionality.h"
+#import "HomeViewController.h"
+#import "SplashScreenModel.h"
+#import "ApplicationInfoModel.h"
+#import "ApplicationSettingModel.h"
+#import "NSObject+DelayedBlock.h"
+#import "UploadVideoDetailViewController.h"
+#import "UserUploadsModel.h"
+#import "AWSRequestObject+functionality.h"
+#import "StickerCategory.h"
+#import "Sticker.h"
+#import "Broadcaster+functionality.h"
+#import "Pricing.h"
+#import "Event.h"
+#import "EventGroup.h"
+#import "EventStats.h"
+#import "UIActionSheet+Blocks.h"
+#import "Contest.h"
+
+#define M3U8_BASE_URL @"baseURL"
+#endif

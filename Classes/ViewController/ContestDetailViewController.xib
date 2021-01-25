@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContestDetailViewController">
+            <connections>
+                <outlet property="myTableView" destination="NlX-Bg-m8M" id="vR6-jh-zTo"/>
+                <outlet property="playerView" destination="LWl-OQ-ayW" id="O2S-O5-h2U"/>
+                <outlet property="uploadButtonHeightConstraint" destination="Iox-xO-7mT" id="Miz-O3-pwP"/>
+                <outlet property="videoPlayerAspectRationConstraint" destination="5pu-4C-mZm" id="LyY-S4-evV"/>
+                <outlet property="videoPlayerTopConstraint" destination="k0L-yJ-2SW" id="GnV-gD-yNW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWl-OQ-ayW" customClass="DMMoviePlayer">
+                    <rect key="frame" x="0.0" y="64" width="600" height="338"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="LWl-OQ-ayW" secondAttribute="height" multiplier="300:169" id="5pu-4C-mZm"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="M4E-gi-6cv"/>
+                    </connections>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NlX-Bg-m8M">
+                    <rect key="frame" x="0.0" y="402" width="600" height="152"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THi-ul-ncj" userLabel="UploadView">
+                    <rect key="frame" x="0.0" y="555" width="600" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LY-LX-YJx" customClass="CustomBoldButton">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                            <color key="backgroundColor" red="0.32156862749999998" green="0.54117647059999996" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                            <state key="normal" title="UPLOAD VIDEO">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="uploadTapped:" destination="-1" eventType="touchUpInside" id="EnU-01-AZV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="2LY-LX-YJx" firstAttribute="top" secondItem="THi-ul-ncj" secondAttribute="top" id="BNQ-U4-5Qh"/>
+                        <constraint firstAttribute="height" constant="45" id="Iox-xO-7mT"/>
+                        <constraint firstItem="2LY-LX-YJx" firstAttribute="leading" secondItem="THi-ul-ncj" secondAttribute="leading" id="Oab-Ai-2bt"/>
+                        <constraint firstAttribute="trailing" secondItem="2LY-LX-YJx" secondAttribute="trailing" id="baC-qK-goK"/>
+                        <constraint firstAttribute="bottom" secondItem="2LY-LX-YJx" secondAttribute="bottom" id="t02-kQ-asa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="THi-ul-ncj" firstAttribute="top" secondItem="NlX-Bg-m8M" secondAttribute="bottom" constant="1" id="1oo-7e-Xf4"/>
+                <constraint firstItem="NlX-Bg-m8M" firstAttribute="top" secondItem="LWl-OQ-ayW" secondAttribute="bottom" id="QR8-tj-F70"/>
+                <constraint firstAttribute="trailing" secondItem="LWl-OQ-ayW" secondAttribute="trailing" id="TBO-h9-Fjj"/>
+                <constraint firstItem="NlX-Bg-m8M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xqw-IP-HnZ"/>
+                <constraint firstAttribute="bottom" secondItem="THi-ul-ncj" secondAttribute="bottom" id="Y3L-fc-Ihf"/>
+                <constraint firstAttribute="trailing" secondItem="NlX-Bg-m8M" secondAttribute="trailing" id="g2M-oG-XBQ"/>
+                <constraint firstAttribute="trailing" secondItem="THi-ul-ncj" secondAttribute="trailing" id="jID-N8-y3N"/>
+                <constraint firstItem="LWl-OQ-ayW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="k0L-yJ-2SW"/>
+                <constraint firstItem="THi-ul-ncj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lyI-dp-4Ze"/>
+                <constraint firstItem="LWl-OQ-ayW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rzV-ab-cG8"/>
+            </constraints>
+            <point key="canvasLocation" x="160" y="182"/>
+        </view>
+    </objects>
+</document>

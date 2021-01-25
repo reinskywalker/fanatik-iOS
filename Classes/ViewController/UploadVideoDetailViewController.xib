@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UploadVideoDetailViewController">
+            <connections>
+                <outlet property="btnPlay" destination="1YP-Bn-gyr" id="Yzh-tg-SXt"/>
+                <outlet property="descLabel" destination="YO1-q2-zo4" id="3OZ-zY-OTV"/>
+                <outlet property="titleLabel" destination="T7Z-QB-h0f" id="RwO-ol-Gwn"/>
+                <outlet property="videoContainerView" destination="Mqq-NX-yKV" id="zUk-UX-W3U"/>
+                <outlet property="videoDetailContainerView" destination="MGo-0q-dfF" id="phH-Xk-XoA"/>
+                <outlet property="videoPlayerTopConstraint" destination="YMW-fR-cua" id="1vj-VX-4rg"/>
+                <outlet property="videoThumbnailImageView" destination="FpK-6g-w3n" id="T6h-qA-hdd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-NX-yKV" userLabel="myVideoPlayerView">
+                    <rect key="frame" x="0.0" y="64" width="320" height="180"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FpK-6g-w3n">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-Bn-gyr">
+                            <rect key="frame" x="135" y="61" width="50" height="57"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="197-Eq-zpr"/>
+                                <constraint firstAttribute="width" constant="50" id="DQj-wX-TgD"/>
+                            </constraints>
+                            <state key="normal" image="btnPlay">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnPlayTapped:" destination="-1" eventType="touchUpInside" id="rxU-Es-HNP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="FpK-6g-w3n" secondAttribute="bottom" id="AdL-zg-ek8"/>
+                        <constraint firstItem="FpK-6g-w3n" firstAttribute="leading" secondItem="Mqq-NX-yKV" secondAttribute="leading" id="X6u-pi-ga3"/>
+                        <constraint firstAttribute="centerY" secondItem="1YP-Bn-gyr" secondAttribute="centerY" constant="0.5" id="ZB0-It-Szi"/>
+                        <constraint firstAttribute="width" secondItem="Mqq-NX-yKV" secondAttribute="height" multiplier="16:9" id="cOE-cV-Ezv"/>
+                        <constraint firstItem="FpK-6g-w3n" firstAttribute="top" secondItem="Mqq-NX-yKV" secondAttribute="top" id="eoj-bt-HPM"/>
+                        <constraint firstAttribute="trailing" secondItem="FpK-6g-w3n" secondAttribute="trailing" id="rD1-9X-Hsh"/>
+                        <constraint firstAttribute="centerX" secondItem="1YP-Bn-gyr" secondAttribute="centerX" id="wme-qr-R52"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGo-0q-dfF" userLabel="videoDetailView">
+                    <rect key="frame" x="0.0" y="245" width="320" height="130"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muse-Starlight live in Moscow  Theatre" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="T7Z-QB-h0f" customClass="CustomBoldLabel">
+                            <rect key="frame" x="20" y="5" width="280" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="Zzo-He-Q9U"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="YO1-q2-zo4" customClass="CustomRegularLabel">
+                            <rect key="frame" x="20" y="46" width="280" height="84"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <string key="text">Muse- Evil Twin. Video directed by Focus Creeps. Exclusive b-side available on 7" vinyl &amp; Mp3 Digital Download on Monday 31st October via http://www.arcticmonkeys-store.co.uk
+TAMPILKAN LEBIH BANYAK
+</string>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="T7Z-QB-h0f" secondAttribute="trailing" constant="20" id="C8c-Bi-mfM"/>
+                        <constraint firstItem="YO1-q2-zo4" firstAttribute="top" secondItem="T7Z-QB-h0f" secondAttribute="bottom" id="Glw-JA-w0q"/>
+                        <constraint firstAttribute="trailing" secondItem="YO1-q2-zo4" secondAttribute="trailing" constant="20" id="LIs-xw-Ca2"/>
+                        <constraint firstAttribute="height" constant="130" id="QS7-98-73n"/>
+                        <constraint firstItem="T7Z-QB-h0f" firstAttribute="leading" secondItem="MGo-0q-dfF" secondAttribute="leading" constant="20" id="fwb-kg-pCX"/>
+                        <constraint firstItem="YO1-q2-zo4" firstAttribute="top" secondItem="MGo-0q-dfF" secondAttribute="top" constant="46" id="kKU-tt-qDg"/>
+                        <constraint firstItem="T7Z-QB-h0f" firstAttribute="top" secondItem="MGo-0q-dfF" secondAttribute="top" constant="5" id="kM2-Su-M23"/>
+                        <constraint firstItem="YO1-q2-zo4" firstAttribute="leading" secondItem="MGo-0q-dfF" secondAttribute="leading" constant="20" id="l0o-lN-UFa"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="kKU-tt-qDg"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MGo-0q-dfF" firstAttribute="top" secondItem="Mqq-NX-yKV" secondAttribute="bottom" constant="1" id="95J-w4-QTD"/>
+                <constraint firstItem="Mqq-NX-yKV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AV5-Pi-KOZ"/>
+                <constraint firstAttribute="trailing" secondItem="Mqq-NX-yKV" secondAttribute="trailing" id="HKW-XN-ryX"/>
+                <constraint firstItem="Mqq-NX-yKV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="YMW-fR-cua"/>
+                <constraint firstAttribute="trailing" secondItem="MGo-0q-dfF" secondAttribute="trailing" id="bZ6-C1-mTN"/>
+                <constraint firstItem="MGo-0q-dfF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wHo-8U-zlw"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="172" y="182"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnPlay" width="50" height="57"/>
+    </resources>
+</document>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AccessToken" syncable="YES">
+        <attribute name="access_token" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="activity_action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activity_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activity_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="activity_object_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activity_object_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activity_time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="activity_time_ago" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activity_user_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Actor" representedClassName="Actor" syncable="YES">
+        <attribute name="actor_email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actor_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actor_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actor_type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="actor_avatar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Avatar" inverseName="avatar_actor" inverseEntity="Avatar" syncable="YES"/>
+        <relationship name="actor_timeline" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timeline" inverseName="timeline_actor" inverseEntity="Timeline" syncable="YES"/>
+    </entity>
+    <entity name="Avatar" representedClassName="Avatar" syncable="YES">
+        <attribute name="avatar_original" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatar_thumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="avatar_actor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Actor" inverseName="actor_avatar" inverseEntity="Actor" syncable="YES"/>
+        <relationship name="avatar_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_avatar" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Clip" representedClassName="Clip" syncable="YES">
+        <attribute name="clip_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clip_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="clip_liked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="clip_position" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="clip_published_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="clip_time_ago" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clip_type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="clip_clip_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClipCategory" inverseName="clipcategory_clip" inverseEntity="ClipCategory" syncable="YES"/>
+        <relationship name="clip_clip_group" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClipGroup" inverseName="clip_group_clips" inverseEntity="ClipGroup" syncable="YES"/>
+        <relationship name="clip_comment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="comment_clip" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="clip_contest" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contest" inverseName="contest_clips" inverseEntity="Contest" syncable="YES"/>
+        <relationship name="clip_pagination" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pagination" inverseName="pagination_clip" inverseEntity="Pagination" syncable="YES"/>
+        <relationship name="clip_playlist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Playlist" inverseName="playlist_clips" inverseEntity="Playlist" syncable="YES"/>
+        <relationship name="clip_related_clips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_related_clips" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="clip_shareable" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shareable" inverseName="shareable_clip" inverseEntity="Shareable" syncable="YES"/>
+        <relationship name="clip_stats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClipStats" inverseName="stats_clip" inverseEntity="ClipStats" syncable="YES"/>
+        <relationship name="clip_timeline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Timeline" inverseName="timeline_clip" inverseEntity="Timeline" syncable="YES"/>
+        <relationship name="clip_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_clip" inverseEntity="User" syncable="YES"/>
+        <relationship name="clip_video" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Video" inverseName="video_clip" inverseEntity="Video" syncable="YES"/>
+    </entity>
+    <entity name="ClipCategory" representedClassName="ClipCategory" syncable="YES">
+        <attribute name="clip_category_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clip_category_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clip_category_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="clipcategory_clip" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_clip_category" inverseEntity="Clip" syncable="YES"/>
+    </entity>
+    <entity name="ClipGroup" representedClassName="ClipGroup" syncable="YES">
+        <attribute name="clip_group_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clip_group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="clip_group_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="clip_group_clips" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Clip" inverseName="clip_clip_group" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="clip_group_thumbnail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thumbnail" inverseName="thumbnail_clip_group" inverseEntity="Thumbnail" syncable="YES"/>
+        <relationship name="clip_group_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_clip_group" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="ClipStats" representedClassName="ClipStats" syncable="YES">
+        <attribute name="clip_stats_comments" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="clip_stats_likes" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="clip_stats_views" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="stats_clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_stats" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="stats_live" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Live" inverseName="live_clip_stat" inverseEntity="Live" syncable="YES"/>
+    </entity>
+    <entity name="Club" representedClassName="Club" syncable="YES">
+        <attribute name="club_active_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="club_avatar_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="club_cover_image_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="club_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="club_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="club_join_message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="club_members_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="club_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="club_user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="club_membership" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClubMembership" inverseName="membership_club" inverseEntity="ClubMembership" syncable="YES"/>
+        <relationship name="club_stats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClubStats" inverseName="stats_club" inverseEntity="ClubStats" syncable="YES"/>
+        <relationship name="club_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_club" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="ClubMembership" syncable="YES">
+        <attribute name="membership_joined" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="membership_club" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Club" inverseName="club_membership" inverseEntity="Club" syncable="YES"/>
+    </entity>
+    <entity name="ClubStats" syncable="YES">
+        <attribute name="stats_member" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="stats_thread" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="stats_club" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Club" inverseName="club_stats" inverseEntity="Club" syncable="YES"/>
+    </entity>
+    <entity name="Comment" representedClassName="Comment" syncable="YES">
+        <attribute name="comment_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comment_created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="comment_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="comment_time_ago" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comment_clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_comment" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="comment_live" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Live" inverseName="live_comment" inverseEntity="Live" syncable="YES"/>
+        <relationship name="comment_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_comment" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Contest" representedClassName="Contest" syncable="YES">
+        <attribute name="contest_avatar_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contest_cover_image_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contest_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contest_end_time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="contest_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="contest_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contest_start_time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="contest_visible" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="contest_clips" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Clip" inverseName="clip_contest" inverseEntity="Clip" syncable="YES"/>
+    </entity>
+    <entity name="CoverImage" representedClassName="CoverImage" syncable="YES">
+        <attribute name="cover_image_160" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cover_image_240" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cover_image_320" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cover_image_480" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cover_image_640" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cover_image_original" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cover_image_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_cover_image" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Hls" representedClassName="Hls" syncable="YES">
+        <attribute name="hls_url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hls_live" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Live" inverseName="live_hls" inverseEntity="Live" syncable="YES"/>
+        <relationship name="hls_resolution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resolution" inverseName="resolution_hls" inverseEntity="Resolution" syncable="YES"/>
+        <relationship name="hls_video" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Video" inverseName="video_hls" inverseEntity="Video" syncable="YES"/>
+    </entity>
+    <entity name="Live" representedClassName="Live" syncable="YES">
+        <attribute name="live_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="live_enable" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="live_enable_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="live_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="live_liked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="live_premium" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="live_title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="live_clip_stat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClipStats" inverseName="stats_live" inverseEntity="ClipStats" syncable="YES"/>
+        <relationship name="live_comment" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="comment_live" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="live_hls" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hls" inverseName="hls_live" inverseEntity="Hls" syncable="YES"/>
+        <relationship name="live_shareable" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shareable" inverseName="shareable_live" inverseEntity="Shareable" syncable="YES"/>
+        <relationship name="live_thumbnail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thumbnail" inverseName="thumbnail_live" inverseEntity="Thumbnail" syncable="YES"/>
+    </entity>
+    <entity name="MenuIcon" representedClassName="MenuIcon" syncable="YES">
+        <attribute name="hdpi" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mdpi" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="xhdpi" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="xxhdpi" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="xxxhdpi" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="icon_menu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RowMenu" inverseName="row_menu_icon" inverseEntity="RowMenu" syncable="YES"/>
+    </entity>
+    <entity name="Package" representedClassName="Package" syncable="YES">
+        <attribute name="package_active" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="package_active_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="package_expired_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="package_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="package_inactive_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="package_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="package_price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="package_renewal_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Pagination" representedClassName="Pagination" syncable="YES">
+        <attribute name="current_page" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="first_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="next_page" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="next_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prev_page" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="prev_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_entries" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="total_pages" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="pagination_clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_pagination" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="pagination_timeline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Timeline" inverseName="timeline_pagination" inverseEntity="Timeline" syncable="YES"/>
+    </entity>
+    <entity name="Payment" representedClassName="Payment" syncable="YES">
+        <attribute name="payment_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_logo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="payment_paymentgroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PaymentGroup" inverseName="paymentgroup_payment" inverseEntity="PaymentGroup" syncable="YES"/>
+    </entity>
+    <entity name="PaymentGroup" representedClassName="PaymentGroup" syncable="YES">
+        <attribute name="paymentgroup_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentgroup_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentgroup_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="paymentgroup_payment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payment" inverseName="payment_paymentgroup" inverseEntity="Payment" syncable="YES"/>
+    </entity>
+    <entity name="Playlist" representedClassName="Playlist" syncable="YES">
+        <attribute name="playlist_created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="playlist_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playlist_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playlist_private" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="playlist_time_ago" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playlist_user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="playlist_clips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_playlist" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="playlist_timeline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Timeline" inverseName="timeline_playlist" inverseEntity="Timeline" syncable="YES"/>
+    </entity>
+    <entity name="Resolution" representedClassName="Resolution" syncable="YES">
+        <attribute name="resolution_320" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resolution_480" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resolution_640" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resolution_720" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="resolution_hls" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hls" inverseName="hls_resolution" inverseEntity="Hls" syncable="YES"/>
+        <relationship name="resolution_smooth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Smooth" inverseName="smooth_resolution" inverseEntity="Smooth" syncable="YES"/>
+        <relationship name="resolution_video" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Video" inverseName="video_resolution" inverseEntity="Video" syncable="YES"/>
+    </entity>
+    <entity name="RowMenu" representedClassName="RowMenu" syncable="YES">
+        <attribute name="row_menu_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="row_menu_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="row_menu_page" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="row_menu_icon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MenuIcon" inverseName="icon_menu" inverseEntity="MenuIcon" syncable="YES"/>
+        <relationship name="row_menu_param" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RowMenuParam" inverseName="rowmenuparam_row_menu" inverseEntity="RowMenuParam" syncable="YES"/>
+        <relationship name="row_menu_section" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SectionMenu" inverseName="section_menu_row_menus" inverseEntity="SectionMenu" syncable="YES"/>
+    </entity>
+    <entity name="RowMenuParam" representedClassName="RowMenuParam" syncable="YES">
+        <attribute name="rowmenuparam_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rowmenuparam_row_menu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RowMenu" inverseName="row_menu_param" inverseEntity="RowMenu" syncable="YES"/>
+    </entity>
+    <entity name="SectionMenu" representedClassName="SectionMenu" syncable="YES">
+        <relationship name="section_menu_row_menus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RowMenu" inverseName="row_menu_section" inverseEntity="RowMenu" syncable="YES"/>
+        <relationship name="section_menu_side_menu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SideMenu" inverseName="sidemenu_section_menus" inverseEntity="SideMenu" syncable="YES"/>
+    </entity>
+    <entity name="SessionToken" syncable="YES">
+        <attribute name="session_token" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES">
+        <attribute name="setting_activity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="setting_notification" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="setting_playlist" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Shareable" representedClassName="Shareable" syncable="YES">
+        <attribute name="shareable_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shareable_url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shareable_clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_shareable" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="shareable_live" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Live" inverseName="live_shareable" inverseEntity="Live" syncable="YES"/>
+    </entity>
+    <entity name="SideMenu" representedClassName="SideMenu" syncable="YES">
+        <relationship name="sidemenu_section_menus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SectionMenu" inverseName="section_menu_side_menu" inverseEntity="SectionMenu" syncable="YES"/>
+    </entity>
+    <entity name="Smooth" representedClassName="Smooth" syncable="YES">
+        <attribute name="smooth_url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="smooth_resolution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resolution" inverseName="resolution_smooth" inverseEntity="Resolution" syncable="YES"/>
+    </entity>
+    <entity name="Socialization" representedClassName="Socialization" syncable="YES">
+        <attribute name="socialization_follower" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="socialization_following" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <relationship name="socialization_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_socialization" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Thread" representedClassName="Thread" syncable="YES">
+        <attribute name="thread_club_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="thread_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_image_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_liked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="thread_time_ago" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="thread_content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ThreadContent" syncable="YES"/>
+        <relationship name="thread_restriction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ThreadRestriction" inverseName="t_restriction_thread" inverseEntity="ThreadRestriction" syncable="YES"/>
+        <relationship name="thread_stats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ThreadStats" inverseName="tstats_thread" inverseEntity="ThreadStats" syncable="YES"/>
+        <relationship name="thread_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_thread_comments" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="ThreadComment" representedClassName="ThreadComment" syncable="YES">
+        <attribute name="thread_comment_commentable_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_comment_commentable_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_comment_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_comment_created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="thread_comment_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_comment_position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="thread_comment_time_ago" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="thread_comment_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="ThreadContent" representedClassName="ThreadContent" syncable="YES">
+        <attribute name="thread_content_html" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_content_plain" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="content_thread" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ThreadContent" inverseName="content_thread" inverseEntity="ThreadContent" syncable="YES"/>
+    </entity>
+    <entity name="ThreadRestriction" representedClassName="ThreadRestriction" syncable="YES">
+        <attribute name="thread_restriction_open" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="t_restriction_thread" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thread" inverseName="thread_restriction" inverseEntity="Thread" syncable="YES"/>
+    </entity>
+    <entity name="ThreadStats" representedClassName="ThreadStats" syncable="YES">
+        <attribute name="thread_stats_comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_stats_likes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_stats_views" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tstats_thread" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thread" inverseName="thread_stats" inverseEntity="Thread" syncable="YES"/>
+    </entity>
+    <entity name="Thumbnail" representedClassName="Thumbnail" syncable="YES">
+        <attribute name="thumbnail_320" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail_480" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail_640" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail_720" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail_big" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail_original" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail_small" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="thumbnail_clip_group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClipGroup" inverseName="clip_group_thumbnail" inverseEntity="ClipGroup" syncable="YES"/>
+        <relationship name="thumbnail_live" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Live" inverseName="live_thumbnail" inverseEntity="Live" syncable="YES"/>
+        <relationship name="thumbnail_video" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Video" inverseName="video_thumbnail" inverseEntity="Video" syncable="YES"/>
+    </entity>
+    <entity name="Timeline" representedClassName="Timeline" syncable="YES">
+        <attribute name="timeline_action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeline_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeline_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="timeline_time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeline_time_ago" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeline_type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="timeline_actor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Actor" inverseName="actor_timeline" inverseEntity="Actor" syncable="YES"/>
+        <relationship name="timeline_clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_timeline" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="timeline_pagination" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pagination" inverseName="pagination_timeline" inverseEntity="Pagination" syncable="YES"/>
+        <relationship name="timeline_playlist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Playlist" inverseName="playlist_timeline" inverseEntity="Playlist" syncable="YES"/>
+        <relationship name="timeline_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_timeline" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="user_biography" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_dob" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="user_email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user_avatar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Avatar" inverseName="avatar_user" inverseEntity="Avatar" syncable="YES"/>
+        <relationship name="user_clip" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_user" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="user_clip_group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClipGroup" inverseName="clip_group_user" inverseEntity="ClipGroup" syncable="YES"/>
+        <relationship name="user_club" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Club" inverseName="club_user" inverseEntity="Club" syncable="YES"/>
+        <relationship name="user_comment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="comment_user" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="user_cover_image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoverImage" inverseName="cover_image_user" inverseEntity="CoverImage" syncable="YES"/>
+        <relationship name="user_socialization" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Socialization" inverseName="socialization_user" inverseEntity="Socialization" syncable="YES"/>
+        <relationship name="user_thread" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Thread" syncable="YES"/>
+        <relationship name="user_thread_comments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Thread" inverseName="thread_user" inverseEntity="Thread" syncable="YES"/>
+        <relationship name="user_timeline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Timeline" inverseName="timeline_user" inverseEntity="Timeline" syncable="YES"/>
+        <relationship name="user_user_stats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserStats" inverseName="user_stats_user" inverseEntity="UserStats" syncable="YES"/>
+    </entity>
+    <entity name="UserStats" representedClassName="UserStats" syncable="YES">
+        <attribute name="user_stats_followers" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="user_stats_following" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="user_stats_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_user_stats" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="UserUploads" representedClassName="UserUploads" syncable="YES">
+        <attribute name="clip_category_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="user_uploads_approved" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="user_uploads_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_uploads_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_uploads_moderated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="user_uploads_rejected_reason" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_uploads_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_uploads_user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_uploads_video_thumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_uploads_video_url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Video" representedClassName="Video" syncable="YES">
+        <attribute name="video_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="video_duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="video_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="video_is_premium" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="video_media_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="video_published_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="video_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="video_total_comments" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="video_total_likes" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="video_type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="video_clip" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clip" inverseName="clip_video" inverseEntity="Clip" syncable="YES"/>
+        <relationship name="video_hls" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hls" inverseName="hls_video" inverseEntity="Hls" syncable="YES"/>
+        <relationship name="video_resolution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resolution" inverseName="resolution_video" inverseEntity="Resolution" syncable="YES"/>
+        <relationship name="video_thumbnail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thumbnail" inverseName="thumbnail_video" inverseEntity="Thumbnail" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AccessToken" positionX="-9" positionY="144" width="128" height="60"/>
+        <element name="Activity" positionX="9" positionY="162" width="128" height="165"/>
+        <element name="Actor" positionX="126" positionY="135" width="128" height="135"/>
+        <element name="Avatar" positionX="-18" positionY="54" width="128" height="105"/>
+        <element name="Clip" positionX="9" positionY="153" width="128" height="330"/>
+        <element name="ClipCategory" positionX="-18" positionY="135" width="128" height="103"/>
+        <element name="ClipGroup" positionX="-18" positionY="135" width="128" height="135"/>
+        <element name="ClipStats" positionX="18" positionY="162" width="128" height="118"/>
+        <element name="Club" positionX="-18" positionY="135" width="128" height="225"/>
+        <element name="ClubMembership" positionX="-9" positionY="144" width="128" height="73"/>
+        <element name="ClubStats" positionX="0" positionY="153" width="128" height="90"/>
+        <element name="Comment" positionX="-27" positionY="90" width="128" height="150"/>
+        <element name="Contest" positionX="126" positionY="135" width="128" height="180"/>
+        <element name="CoverImage" positionX="0" positionY="72" width="128" height="150"/>
+        <element name="Hls" positionX="-18" positionY="135" width="128" height="103"/>
+        <element name="Live" positionX="-9" positionY="144" width="128" height="225"/>
+        <element name="MenuIcon" positionX="-9" positionY="144" width="128" height="133"/>
+        <element name="Package" positionX="18" positionY="90" width="128" height="165"/>
+        <element name="Pagination" positionX="-18" positionY="135" width="128" height="210"/>
+        <element name="Payment" positionX="-18" positionY="135" width="128" height="103"/>
+        <element name="PaymentGroup" positionX="-9" positionY="144" width="128" height="105"/>
+        <element name="Playlist" positionX="0" positionY="153" width="128" height="165"/>
+        <element name="Resolution" positionX="0" positionY="135" width="128" height="148"/>
+        <element name="RowMenu" positionX="-18" positionY="135" width="128" height="133"/>
+        <element name="RowMenuParam" positionX="-18" positionY="135" width="128" height="73"/>
+        <element name="SectionMenu" positionX="-18" positionY="135" width="128" height="73"/>
+        <element name="SessionToken" positionX="-18" positionY="135" width="128" height="60"/>
+        <element name="Settings" positionX="-18" positionY="135" width="128" height="90"/>
+        <element name="Shareable" positionX="-18" positionY="135" width="128" height="103"/>
+        <element name="SideMenu" positionX="36" positionY="189" width="128" height="58"/>
+        <element name="Smooth" positionX="36" positionY="189" width="128" height="75"/>
+        <element name="Socialization" positionX="-36" positionY="36" width="128" height="88"/>
+        <element name="Thread" positionX="-18" positionY="135" width="128" height="210"/>
+        <element name="ThreadComment" positionX="-18" positionY="135" width="128" height="163"/>
+        <element name="ThreadContent" positionX="-18" positionY="135" width="128" height="90"/>
+        <element name="ThreadRestriction" positionX="18" positionY="171" width="128" height="75"/>
+        <element name="ThreadStats" positionX="9" positionY="162" width="128" height="105"/>
+        <element name="Thumbnail" positionX="-18" positionY="99" width="128" height="193"/>
+        <element name="Timeline" positionX="432" positionY="114" width="128" height="210"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="360"/>
+        <element name="UserStats" positionX="-54" positionY="27" width="128" height="88"/>
+        <element name="UserUploads" positionX="135" positionY="144" width="128" height="195"/>
+        <element name="Video" positionX="-9" positionY="117" width="128" height="255"/>
+    </elements>
+</model>

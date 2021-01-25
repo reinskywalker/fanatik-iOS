@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiveChatViewController">
+            <connections>
+                <outlet property="blankLabel" destination="1s9-V6-sQq" id="ShR-1M-04k"/>
+                <outlet property="myCollectionView" destination="Ptj-Hn-dcY" id="c2i-OT-wkR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ptj-Hn-dcY">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cpY-pi-j8T">
+                        <size key="itemSize" width="145" height="135"/>
+                        <size key="headerReferenceSize" width="50" height="54"/>
+                        <size key="footerReferenceSize" width="50" height="12"/>
+                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7ac-7I-ttQ"/>
+                        <outlet property="delegate" destination="-1" id="edb-h0-jYh"/>
+                    </connections>
+                </collectionView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There's no live chat right now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-V6-sQq" customClass="CustomRegularLabel">
+                    <rect key="frame" x="175" y="250" width="250" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="GZN-uU-RR7"/>
+                        <constraint firstAttribute="width" constant="250" id="J4Z-6F-Lxm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Ptj-Hn-dcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6AY-7d-16s"/>
+                <constraint firstAttribute="trailing" secondItem="Ptj-Hn-dcY" secondAttribute="trailing" id="A0G-6X-ZQJ"/>
+                <constraint firstItem="Ptj-Hn-dcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="LVL-zO-i8U"/>
+                <constraint firstItem="1s9-V6-sQq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="VwX-T7-25g"/>
+                <constraint firstAttribute="bottom" secondItem="Ptj-Hn-dcY" secondAttribute="bottom" id="ram-9S-oKc"/>
+                <constraint firstItem="1s9-V6-sQq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uWU-DX-ysa"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

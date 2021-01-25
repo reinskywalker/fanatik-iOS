@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="n1Z-sp-vPA" userLabel="Club List Table View Cell" customClass="ClubListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n1Z-sp-vPA" id="xWN-vv-Uuw">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3QO-Ne-cWN">
+                        <rect key="frame" x="10" y="17" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="Oz3-de-6dZ"/>
+                            <constraint firstAttribute="height" constant="28" id="g9V-H3-qVR"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bepe20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJm-8c-A7z" customClass="CustomBoldLabel">
+                        <rect key="frame" x="50" y="15" width="177" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="u57-uw-4PJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.400.000 pengikut" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShI-Tg-pKJ" customClass="CustomRegularLabel">
+                        <rect key="frame" x="50" y="29" width="186" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="0ZT-yD-ear"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="11"/>
+                        <color key="textColor" red="0.5296475887298584" green="0.52963173389434814" blue="0.52964073419570923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpn-ft-LNU">
+                        <rect key="frame" x="0.0" y="60" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.75559091567993164" green="0.75556838512420654" blue="0.75558114051818848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Zvq-6c-VSV"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBQ-yh-G67">
+                        <rect key="frame" x="242" y="17" width="70" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="9CY-CN-wsV"/>
+                            <constraint firstAttribute="height" constant="27" id="P7Q-30-Blr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                        <state key="normal" title="Join">
+                            <color key="titleColor" red="0.18530288338661194" green="0.52299124002456665" blue="0.98370260000228882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="joinClubTapped:" destination="n1Z-sp-vPA" eventType="touchUpInside" id="T2r-UJ-5Ys"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ShI-Tg-pKJ" firstAttribute="top" secondItem="SJm-8c-A7z" secondAttribute="bottom" constant="-6" id="DNo-Yi-eK8"/>
+                    <constraint firstItem="Zpn-ft-LNU" firstAttribute="leading" secondItem="xWN-vv-Uuw" secondAttribute="leadingMargin" constant="-8" id="DTq-Yd-VD7"/>
+                    <constraint firstItem="SJm-8c-A7z" firstAttribute="leading" secondItem="3QO-Ne-cWN" secondAttribute="trailing" constant="12" id="Lku-vg-4dB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Zpn-ft-LNU" secondAttribute="trailing" constant="-8" id="O2B-VR-4TQ"/>
+                    <constraint firstItem="XBQ-yh-G67" firstAttribute="leading" secondItem="ShI-Tg-pKJ" secondAttribute="trailing" constant="6" id="PKr-kK-abd"/>
+                    <constraint firstItem="XBQ-yh-G67" firstAttribute="leading" secondItem="SJm-8c-A7z" secondAttribute="trailing" constant="15" id="Rmw-rS-L77"/>
+                    <constraint firstItem="3QO-Ne-cWN" firstAttribute="leading" secondItem="xWN-vv-Uuw" secondAttribute="leadingMargin" constant="2" id="bPL-0N-E7a"/>
+                    <constraint firstAttribute="centerY" secondItem="3QO-Ne-cWN" secondAttribute="centerY" constant="-0.5" id="cEs-7x-bpE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="XBQ-yh-G67" secondAttribute="trailing" id="cMi-jV-CFw"/>
+                    <constraint firstItem="ShI-Tg-pKJ" firstAttribute="leading" secondItem="3QO-Ne-cWN" secondAttribute="trailing" constant="12" id="iUX-m3-Bte"/>
+                    <constraint firstItem="SJm-8c-A7z" firstAttribute="top" secondItem="xWN-vv-Uuw" secondAttribute="topMargin" constant="7" id="v38-M8-YSo"/>
+                    <constraint firstItem="XBQ-yh-G67" firstAttribute="top" secondItem="xWN-vv-Uuw" secondAttribute="topMargin" constant="9" id="w63-HY-EiM"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Zpn-ft-LNU" secondAttribute="bottom" constant="-8" id="xe9-7i-0Tk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="clubImageView" destination="3QO-Ne-cWN" id="AfU-n5-lPj"/>
+                <outlet property="clubNameLabel" destination="SJm-8c-A7z" id="fil-hG-fPh"/>
+                <outlet property="clubStatsLabel" destination="ShI-Tg-pKJ" id="mob-Jj-KSZ"/>
+                <outlet property="joinButton" destination="XBQ-yh-G67" id="YFu-Sc-QNL"/>
+            </connections>
+            <point key="canvasLocation" x="214" y="169"/>
+        </tableViewCell>
+    </objects>
+</document>

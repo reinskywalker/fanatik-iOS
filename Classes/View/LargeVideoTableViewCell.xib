@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="236" id="KGk-i7-Jjw" customClass="LargeVideoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="249"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n8g-Cm-MNw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="249"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7l7-2e-5rO">
+                            <size key="itemSize" width="290" height="240"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="t2b-SA-E4L"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="EWa-v4-Vc7"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" red="0.94117647058823528" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="n8g-Cm-MNw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="GsW-53-4fQ"/>
+                    <constraint firstItem="n8g-Cm-MNw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="JlS-8q-CPm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="n8g-Cm-MNw" secondAttribute="bottom" constant="-8" id="Nba-Vs-jzX"/>
+                    <constraint firstItem="n8g-Cm-MNw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Oey-cv-ndp"/>
+                    <constraint firstItem="n8g-Cm-MNw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Zwy-7j-n1K"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="n8g-Cm-MNw" secondAttribute="trailing" constant="-8" id="bf3-YA-aLU"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="n8g-Cm-MNw" secondAttribute="bottom" constant="-9" id="vuU-Gh-D6D"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="n8g-Cm-MNw" secondAttribute="trailing" constant="-8" id="ySs-0f-xdO"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="JlS-8q-CPm"/>
+                        <exclude reference="Oey-cv-ndp"/>
+                        <exclude reference="vuU-Gh-D6D"/>
+                        <exclude reference="ySs-0f-xdO"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="clipCollectionView" destination="n8g-Cm-MNw" id="Fr1-bz-29X"/>
+            </connections>
+            <point key="canvasLocation" x="222" y="341"/>
+        </tableViewCell>
+    </objects>
+</document>

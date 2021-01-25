@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController">
+            <connections>
+                <outlet property="leftButton" destination="xSF-Kr-lTs" id="Ozf-3J-KND"/>
+                <outlet property="myActivityView" destination="JnM-4u-Zu7" id="Qev-Dg-M9N"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="Vqu-Jp-Tdw" id="veA-ho-0kE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vqu-Jp-Tdw">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="DoY-gY-q0m"/>
+                    </connections>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAR-Dd-glG">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSF-Kr-lTs" customClass="CustomMediumButton">
+                            <rect key="frame" x="0.0" y="17" width="64" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="MJh-Ap-EgL"/>
+                                <constraint firstAttribute="width" constant="64" id="l0z-zx-dVH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="Tutup">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="JnM-4u-Zu7">
+                            <rect key="frame" x="564" y="29" width="20" height="20"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="2NV-uO-ECG"/>
+                        <constraint firstItem="xSF-Kr-lTs" firstAttribute="top" secondItem="GAR-Dd-glG" secondAttribute="top" constant="17" id="3yA-Br-dgR"/>
+                        <constraint firstItem="xSF-Kr-lTs" firstAttribute="leading" secondItem="GAR-Dd-glG" secondAttribute="leading" id="cjy-aV-yCS"/>
+                        <constraint firstAttribute="trailing" secondItem="JnM-4u-Zu7" secondAttribute="trailing" constant="16" id="hHD-7d-GMQ"/>
+                        <constraint firstItem="JnM-4u-Zu7" firstAttribute="top" secondItem="GAR-Dd-glG" secondAttribute="top" constant="29" id="tvU-tk-SHK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Vqu-Jp-Tdw" secondAttribute="bottom" id="5b6-Wd-UEt"/>
+                <constraint firstAttribute="trailing" secondItem="GAR-Dd-glG" secondAttribute="trailing" id="8lQ-yK-P8Y"/>
+                <constraint firstItem="Vqu-Jp-Tdw" firstAttribute="top" secondItem="GAR-Dd-glG" secondAttribute="bottom" id="946-CR-AwL"/>
+                <constraint firstItem="GAR-Dd-glG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ikj-d8-sMD"/>
+                <constraint firstItem="GAR-Dd-glG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JAd-ar-jA9"/>
+                <constraint firstItem="Vqu-Jp-Tdw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rIf-6d-W9c"/>
+                <constraint firstAttribute="trailing" secondItem="Vqu-Jp-Tdw" secondAttribute="trailing" id="yBS-CL-VZe"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+</document>

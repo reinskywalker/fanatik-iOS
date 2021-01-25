@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Z3U-jg-eQ6" customClass="AttributedLabelCustomHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnZ-Mb-8TM" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWe-8B-W5G" customClass="DTAttributedLabel">
+                            <rect key="frame" x="8" y="1" width="310" height="39"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="39" id="3Ju-wQ-djR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89790713787078857" green="0.92178690433502197" blue="0.92629325389862061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="KWe-8B-W5G" secondAttribute="trailing" constant="2" id="LmA-ID-PCU"/>
+                        <constraint firstAttribute="centerY" secondItem="KWe-8B-W5G" secondAttribute="centerY" constant="-0.5" id="Rul-bf-Rxf"/>
+                        <constraint firstItem="KWe-8B-W5G" firstAttribute="leading" secondItem="PnZ-Mb-8TM" secondAttribute="leading" constant="8" id="gOt-1B-kG5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PnZ-Mb-8TM" secondAttribute="trailing" id="4nD-7m-2VY"/>
+                <constraint firstItem="PnZ-Mb-8TM" firstAttribute="top" secondItem="Z3U-jg-eQ6" secondAttribute="top" id="FUY-Uw-1he"/>
+                <constraint firstItem="PnZ-Mb-8TM" firstAttribute="leading" secondItem="Z3U-jg-eQ6" secondAttribute="leading" id="kPA-1o-kCu"/>
+                <constraint firstAttribute="bottom" secondItem="PnZ-Mb-8TM" secondAttribute="bottom" id="w49-yV-v8o"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="attributedLabel" destination="KWe-8B-W5G" id="3zz-nW-kaw"/>
+                <outlet property="attributedLabelHeightConstraint" destination="3Ju-wQ-djR" id="dE7-ck-Stg"/>
+            </connections>
+            <point key="canvasLocation" x="258" y="479"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RightMenuViewController">
+            <connections>
+                <outlet property="OSVerTF" destination="F3G-9p-acD" id="AIZ-6y-R7s"/>
+                <outlet property="appVerTF" destination="fTY-rk-dVA" id="fgo-Hj-I0S"/>
+                <outlet property="debugTextView" destination="Bb7-gw-DZ1" id="dYo-q3-N83"/>
+                <outlet property="serverURLTF" destination="76p-2c-Kmq" id="kMA-RL-2Te"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bb7-gw-DZ1">
+                    <rect key="frame" x="0.0" y="193" width="600" height="407"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Server URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76p-2c-Kmq">
+                    <rect key="frame" x="82" y="70" width="425" height="30"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ZSw-4T-GNI"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjk-wX-t8I" customClass="CustomMediumButton">
+                    <rect key="frame" x="546" y="154" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="Vop-pX-0JU"/>
+                        <constraint firstAttribute="height" constant="30" id="hD8-te-3Yu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <state key="normal" title="Clear">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clearScreen:" destination="-1" eventType="touchUpInside" id="Uj0-cT-LR6"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F3G-9p-acD">
+                    <rect key="frame" x="52" y="116" width="65" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="BCj-L5-QBB"/>
+                        <constraint firstAttribute="height" constant="30" id="t66-CZ-n5P"/>
+                    </constraints>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Mop-jf-lTw"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTY-rk-dVA">
+                    <rect key="frame" x="182" y="116" width="65" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="Y0L-RJ-zmQ"/>
+                        <constraint firstAttribute="height" constant="30" id="qqr-y8-fLQ"/>
+                    </constraints>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="4T7-8l-6OL"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OS Ver: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtb-rL-6XI" customClass="CustomRegularLabel">
+                    <rect key="frame" x="8" y="120" width="49" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="ApM-KX-DhV"/>
+                        <constraint firstAttribute="height" constant="21" id="jM3-Ey-zHW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z8-c6-Rle" customClass="CustomRegularLabel">
+                    <rect key="frame" x="8" y="74" width="76" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="4Qw-Zm-1fY"/>
+                        <constraint firstAttribute="width" constant="76" id="xf7-3j-OMn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Ver: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDN-bd-3AS" customClass="CustomRegularLabel">
+                    <rect key="frame" x="125" y="120" width="49" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="csD-NS-EXX"/>
+                        <constraint firstAttribute="height" constant="21" id="xWc-7M-g1K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUo-Dl-bda">
+                    <rect key="frame" x="255" y="117" width="48" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="Ain-W2-3ie"/>
+                        <constraint firstAttribute="height" constant="30" id="dq6-DX-v6T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <state key="normal" title="Save Ver">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveHeader:" destination="-1" eventType="touchUpInside" id="8AJ-k9-PAa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88y-zp-xT1">
+                    <rect key="frame" x="509" y="70" width="92" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="92" id="OTc-3n-7rB"/>
+                        <constraint firstAttribute="height" constant="30" id="mVx-Na-AhV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <state key="normal" title="Save Server">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveURL:" destination="-1" eventType="touchUpInside" id="MDj-fl-cme"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="88y-zp-xT1" firstAttribute="leading" secondItem="76p-2c-Kmq" secondAttribute="trailing" constant="2" id="1y4-1B-kgg"/>
+                <constraint firstItem="vUo-Dl-bda" firstAttribute="top" secondItem="76p-2c-Kmq" secondAttribute="bottom" constant="17" id="9b8-Dp-N7j"/>
+                <constraint firstItem="vUo-Dl-bda" firstAttribute="leading" secondItem="fTY-rk-dVA" secondAttribute="trailing" constant="8" id="AuW-Qa-MkZ"/>
+                <constraint firstItem="76p-2c-Kmq" firstAttribute="leading" secondItem="1z8-c6-Rle" secondAttribute="trailing" constant="-2" id="Bke-yv-Zgc"/>
+                <constraint firstItem="F3G-9p-acD" firstAttribute="leading" secondItem="qtb-rL-6XI" secondAttribute="trailing" constant="-5" id="CH7-dN-rJd"/>
+                <constraint firstItem="qtb-rL-6XI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Fd1-hg-CCz"/>
+                <constraint firstAttribute="bottom" secondItem="Bb7-gw-DZ1" secondAttribute="bottom" id="ITk-OE-XPm"/>
+                <constraint firstAttribute="trailing" secondItem="Bb7-gw-DZ1" secondAttribute="trailing" id="LxR-wW-csW"/>
+                <constraint firstAttribute="trailing" secondItem="kjk-wX-t8I" secondAttribute="trailing" constant="8" id="OJc-uU-Cgf"/>
+                <constraint firstAttribute="trailing" secondItem="76p-2c-Kmq" secondAttribute="trailing" constant="93" id="OaO-Dx-O6f"/>
+                <constraint firstItem="kjk-wX-t8I" firstAttribute="top" secondItem="76p-2c-Kmq" secondAttribute="bottom" constant="54" id="Q9V-1X-eD6"/>
+                <constraint firstItem="88y-zp-xT1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="Woy-rm-d1P"/>
+                <constraint firstItem="fTY-rk-dVA" firstAttribute="top" secondItem="76p-2c-Kmq" secondAttribute="bottom" constant="16" id="aoP-V3-CK4"/>
+                <constraint firstItem="qtb-rL-6XI" firstAttribute="top" secondItem="76p-2c-Kmq" secondAttribute="bottom" constant="20" id="dlc-Qy-GDb"/>
+                <constraint firstItem="F3G-9p-acD" firstAttribute="top" secondItem="76p-2c-Kmq" secondAttribute="bottom" constant="16" id="eaB-eo-Rxe"/>
+                <constraint firstItem="1z8-c6-Rle" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="ewC-NN-5ZZ"/>
+                <constraint firstItem="Bb7-gw-DZ1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ghP-pQ-Bfp"/>
+                <constraint firstItem="76p-2c-Kmq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="mAb-Sj-nlY"/>
+                <constraint firstItem="KDN-bd-3AS" firstAttribute="leading" secondItem="F3G-9p-acD" secondAttribute="trailing" constant="8" id="q0B-0z-rMx"/>
+                <constraint firstItem="Bb7-gw-DZ1" firstAttribute="top" secondItem="76p-2c-Kmq" secondAttribute="bottom" constant="93" id="t7x-d9-lxx"/>
+                <constraint firstItem="fTY-rk-dVA" firstAttribute="leading" secondItem="KDN-bd-3AS" secondAttribute="trailing" constant="8" id="ws3-qe-yf7"/>
+                <constraint firstItem="KDN-bd-3AS" firstAttribute="top" secondItem="76p-2c-Kmq" secondAttribute="bottom" constant="20" id="x0c-83-ogd"/>
+                <constraint firstItem="1z8-c6-Rle" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="zws-NM-CbI"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="245" y="220"/>
+        </view>
+    </objects>
+</document>

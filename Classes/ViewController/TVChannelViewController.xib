@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TVChannelViewController">
+            <connections>
+                <outlet property="blankLabel" destination="T8j-wj-ZwA" id="EWq-5j-Ovx"/>
+                <outlet property="myTableView" destination="le2-w1-JBN" id="FnP-CD-xCO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="le2-w1-JBN">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zmk-AK-TCm"/>
+                        <outlet property="delegate" destination="-1" id="HgW-Hs-By7"/>
+                    </connections>
+                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There's no TV channel right now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8j-wj-ZwA" customClass="CustomRegularLabel">
+                    <rect key="frame" x="175" y="250" width="250" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="7vm-w0-5WI"/>
+                        <constraint firstAttribute="width" constant="250" id="bEW-0Q-vEL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="le2-w1-JBN" secondAttribute="trailing" id="5w9-2j-S5R"/>
+                <constraint firstItem="le2-w1-JBN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="U7J-FA-ajg"/>
+                <constraint firstItem="T8j-wj-ZwA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="W5j-oU-gjF"/>
+                <constraint firstAttribute="bottom" secondItem="le2-w1-JBN" secondAttribute="bottom" id="Yoe-lZ-xHh"/>
+                <constraint firstItem="T8j-wj-ZwA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ihK-rA-tka"/>
+                <constraint firstItem="le2-w1-JBN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sKY-u9-9K4"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

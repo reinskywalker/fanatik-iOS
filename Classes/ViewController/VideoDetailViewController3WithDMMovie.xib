@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoDetailViewController">
+            <connections>
+                <outlet property="heightKeyboardViewConstraint" destination="pqe-M5-iud" id="Anb-kq-mCj"/>
+                <outlet property="keyboardView" destination="vcV-zy-15X" id="ZlS-e5-Spm"/>
+                <outlet property="myTableView" destination="8Fl-U1-Wo7" id="5dd-uR-JVI"/>
+                <outlet property="playerView" destination="RMD-BG-C4c" id="rkZ-fx-f3t"/>
+                <outlet property="videoPlayerAspectRationConstraint" destination="IwY-ZI-1Jn" id="KcL-o7-QnD"/>
+                <outlet property="videoPlayerTopConstraint" destination="UCr-0q-5us" id="wy8-Vo-ua7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMD-BG-C4c" customClass="DMMoviePlayer">
+                    <rect key="frame" x="0.0" y="64" width="600" height="338"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="RMD-BG-C4c" secondAttribute="height" multiplier="16:9" id="IwY-ZI-1Jn"/>
+                    </constraints>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="IwY-ZI-1Jn"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular">
+                        <mask key="constraints">
+                            <exclude reference="IwY-ZI-1Jn"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="oYG-ao-WBZ"/>
+                    </connections>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Fl-U1-Wo7">
+                    <rect key="frame" x="0.0" y="402" width="600" height="154"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcV-zy-15X" customClass="DMKeyboardView">
+                    <rect key="frame" x="0.0" y="555" width="600" height="45"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="pqe-M5-iud"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Oqs-oC-zAs"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8Fl-U1-Wo7" secondAttribute="trailing" id="95n-jD-n4a"/>
+                <constraint firstItem="vcV-zy-15X" firstAttribute="top" secondItem="8Fl-U1-Wo7" secondAttribute="bottom" constant="-1" id="AoN-W3-8O9"/>
+                <constraint firstAttribute="bottom" secondItem="vcV-zy-15X" secondAttribute="bottom" id="HUK-va-xmq"/>
+                <constraint firstItem="RMD-BG-C4c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="UCr-0q-5us"/>
+                <constraint firstAttribute="trailing" secondItem="RMD-BG-C4c" secondAttribute="trailing" id="aan-Oc-ah6"/>
+                <constraint firstItem="vcV-zy-15X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e6Y-4Y-646"/>
+                <constraint firstItem="RMD-BG-C4c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gNv-9t-bFb"/>
+                <constraint firstAttribute="trailing" secondItem="vcV-zy-15X" secondAttribute="trailing" id="mjM-SK-6B6"/>
+                <constraint firstItem="8Fl-U1-Wo7" firstAttribute="top" secondItem="RMD-BG-C4c" secondAttribute="bottom" id="ne8-YQ-WFO"/>
+                <constraint firstItem="8Fl-U1-Wo7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p5S-FU-1cw"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <point key="canvasLocation" x="178" y="342"/>
+        </view>
+    </objects>
+</document>

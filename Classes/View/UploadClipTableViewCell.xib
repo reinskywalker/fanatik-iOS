@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UploadClipTableViewCell" id="KGk-i7-Jjw" userLabel="UploadClipTableViewCell" customClass="UploadClipTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1r-dK-3Vo">
+                        <rect key="frame" x="10" y="10" width="104" height="58"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="104" id="ivj-Pp-Rl1"/>
+                            <constraint firstAttribute="height" constant="58" id="ktB-Vo-WYy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ganteng-Ganteng Serigala Episode 2" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5q6-sW-Fcl" customClass="CustomRegularLabel">
+                        <rect key="frame" x="130" y="11" width="159" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="eC1-YF-jfa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P91-jB-4yM">
+                        <rect key="frame" x="276" y="34" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="Lf9-tH-g57"/>
+                            <constraint firstAttribute="height" constant="44" id="uuB-P9-oPE"/>
+                        </constraints>
+                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="13"/>
+                        <state key="normal" image="moreGray">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="moreButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="90n-gx-Gc3"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-AO-o6t" customClass="DTAttributedLabel">
+                        <rect key="frame" x="130" y="43" width="138" height="19"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="yWK-Er-5QH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="P91-jB-4yM" secondAttribute="bottom" constant="-10" id="12e-0L-hNx"/>
+                    <constraint firstItem="zxs-AO-o6t" firstAttribute="leading" secondItem="R1r-dK-3Vo" secondAttribute="trailing" constant="16" id="3aJ-hk-NWc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5q6-sW-Fcl" secondAttribute="trailing" constant="23" id="6SR-7m-Xap"/>
+                    <constraint firstItem="R1r-dK-3Vo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="6jh-hd-bP6"/>
+                    <constraint firstItem="5q6-sW-Fcl" firstAttribute="leading" secondItem="R1r-dK-3Vo" secondAttribute="trailing" constant="16" id="Hmg-0i-64N"/>
+                    <constraint firstItem="zxs-AO-o6t" firstAttribute="top" secondItem="5q6-sW-Fcl" secondAttribute="bottom" constant="-1" id="LMw-jF-fvi"/>
+                    <constraint firstAttribute="centerY" secondItem="R1r-dK-3Vo" secondAttribute="centerY" constant="-0.5" id="P9Z-Z9-FXa"/>
+                    <constraint firstItem="5q6-sW-Fcl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="W9R-f0-j6J"/>
+                    <constraint firstItem="P91-jB-4yM" firstAttribute="leading" secondItem="zxs-AO-o6t" secondAttribute="trailing" constant="8" id="rZH-zK-lR6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="P91-jB-4yM" secondAttribute="trailing" constant="-8" id="zJB-sQ-KiC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="moreButtonForCell" destination="P91-jB-4yM" id="lej-Le-4ij"/>
+                <outlet property="statusUploadLabel" destination="zxs-AO-o6t" id="RxQ-2h-brs"/>
+                <outlet property="videoImageView" destination="R1r-dK-3Vo" id="qXV-h1-X4b"/>
+                <outlet property="videoTitleLabel" destination="5q6-sW-Fcl" id="Vc2-9w-RlK"/>
+            </connections>
+            <point key="canvasLocation" x="182" y="166"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="moreGray" width="4" height="18"/>
+    </resources>
+</document>

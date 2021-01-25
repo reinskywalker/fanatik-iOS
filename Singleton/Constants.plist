@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>website_url</key>
+	<string>https://fanatik.id</string>
+	<key>chat_url</key>
+	<string>ws://mozart.fanatik.id/primus</string>
+	<key>sticker_url</key>
+	<string>http://mozart.fanatik.id/</string>
+	<key>faye_server_url</key>
+	<string>http://fanatik.id:9292/pub-sub</string>
+	<key>google_plus_client_id</key>
+	<string>888040514822-7n0vrdc7n79k6g6krgb8nfsqqh65oqvv.apps.googleusercontent.com</string>
+	<key>api_version</key>
+	<string>v1</string>
+	<key>partner_name</key>
+	<string>domikado</string>
+	<key>server_url</key>
+	<string>https://api.fanatik.id</string>
+	<key>facebook_api</key>
+	<string>1408611126061089</string>
+	<key>default_date_time_format</key>
+	<string>dd MMM yyyy - hh:mm</string>
+	<key>default_date_format</key>
+	<string>dd MMM yyyy</string>
+	<key>default_time_format</key>
+	<string>hh:mm</string>
+	<key>default_date_format_month_date</key>
+	<string>MMM dd</string>
+</dict>
+</plist>

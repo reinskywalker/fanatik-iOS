@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BroadcasterDetailViewController">
+            <connections>
+                <outlet property="chatTopConstraint" destination="AoD-Lh-Jy2" id="wm1-vD-aOn"/>
+                <outlet property="myChatView" destination="qn5-pK-LBI" id="gQS-Wp-KAk"/>
+                <outlet property="playerView" destination="RMD-BG-C4c" id="rkZ-fx-f3t"/>
+                <outlet property="videoPlayerAspectRationConstraint" destination="IwY-ZI-1Jn" id="KcL-o7-QnD"/>
+                <outlet property="videoPlayerBottomConstraint" destination="1Fu-7X-Kxg" id="l0F-MS-cIw"/>
+                <outlet property="videoPlayerTopConstraint" destination="1yy-ZQ-s1Z" id="TJo-GT-MXG"/>
+                <outlet property="videoPlayerTrailingConstraint" destination="aan-Oc-ah6" id="TTC-gq-Z7J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qn5-pK-LBI" customClass="DMChatView">
+                    <rect key="frame" x="0.0" y="402" width="600" height="198"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="6fR-wJ-yXr"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMD-BG-C4c" customClass="DMMoviePlayer">
+                    <rect key="frame" x="0.0" y="64" width="600" height="338"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="RMD-BG-C4c" secondAttribute="height" multiplier="16:9" id="IwY-ZI-1Jn"/>
+                    </constraints>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="IwY-ZI-1Jn"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular">
+                        <mask key="constraints">
+                            <exclude reference="IwY-ZI-1Jn"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="uht-OD-q8u"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="RMD-BG-C4c" secondAttribute="bottom" id="1Fu-7X-Kxg"/>
+                <constraint firstItem="RMD-BG-C4c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="1yy-ZQ-s1Z">
+                    <variation key="heightClass=compact" constant="0.0"/>
+                    <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="qn5-pK-LBI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="289" id="AoD-Lh-Jy2"/>
+                <constraint firstAttribute="trailing" secondItem="qn5-pK-LBI" secondAttribute="trailing" id="RV8-WL-7eL"/>
+                <constraint firstAttribute="trailing" secondItem="RMD-BG-C4c" secondAttribute="trailing" id="aan-Oc-ah6"/>
+                <constraint firstItem="RMD-BG-C4c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gNv-9t-bFb"/>
+                <constraint firstItem="qn5-pK-LBI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tDf-Wj-0Pk"/>
+                <constraint firstAttribute="bottom" secondItem="qn5-pK-LBI" secondAttribute="bottom" id="w0M-lu-ZS7"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1Fu-7X-Kxg"/>
+                    <exclude reference="AoD-Lh-Jy2"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="1Fu-7X-Kxg"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="AoD-Lh-Jy2"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="w0M-lu-ZS7"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

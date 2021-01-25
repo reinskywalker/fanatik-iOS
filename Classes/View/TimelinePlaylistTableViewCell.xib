@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelinePlaylistTableViewCell" rowHeight="191" id="KGk-i7-Jjw" customClass="TimelinePlaylistTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dangdut Koplo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCX-E9-Kbg">
+                        <rect key="frame" x="10" y="8" width="302" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="bXA-ce-PKz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHI-Ju-sgm">
+                        <rect key="frame" x="10" y="25" width="302" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ia1-qL-vgG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qa6-cn-2Pj">
+                        <rect key="frame" x="0.0" y="48" width="320" height="151"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="e4A-2Z-Otz">
+                            <size key="itemSize" width="160" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="i4i-HB-tKn"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="dQD-AN-0yI"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QHI-Ju-sgm" firstAttribute="top" secondItem="BCX-E9-Kbg" secondAttribute="bottom" constant="-4" id="844-iT-Qcq"/>
+                    <constraint firstItem="BCX-E9-Kbg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="EhL-Lh-UR3"/>
+                    <constraint firstItem="QHI-Ju-sgm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="Ot7-FQ-Y2L"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qa6-cn-2Pj" secondAttribute="bottom" constant="-8" id="PF3-Lb-6Xr"/>
+                    <constraint firstItem="qa6-cn-2Pj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Ylo-ga-Zuc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qa6-cn-2Pj" secondAttribute="trailing" constant="-8" id="byC-Oh-UqY"/>
+                    <constraint firstItem="BCX-E9-Kbg" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hQW-dT-XUX"/>
+                    <constraint firstItem="qa6-cn-2Pj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="40" id="jsH-7F-vMe"/>
+                    <constraint firstItem="BCX-E9-Kbg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="mfK-Xn-jcj"/>
+                    <constraint firstItem="QHI-Ju-sgm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="yoD-Wg-uG8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="clipCollectionView" destination="qa6-cn-2Pj" id="Xxm-sM-gGJ"/>
+                <outlet property="playlistNameLabel" destination="BCX-E9-Kbg" id="9VW-DR-WXJ"/>
+                <outlet property="playlistVideoCountLabel" destination="QHI-Ju-sgm" id="kGG-Sc-Gh8"/>
+            </connections>
+            <point key="canvasLocation" x="207" y="261"/>
+        </tableViewCell>
+    </objects>
+</document>

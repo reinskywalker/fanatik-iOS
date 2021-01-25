@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7531"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9Kj-Dm-NOw" customClass="HorizontalMenuHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZB6-pW-UfR" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JjU-Op-e3v" userLabel="horizmenu" customClass="SwipeView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jm8-xE-y47">
+                                    <rect key="frame" x="0.0" y="36" width="320" height="1"/>
+                                    <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="nE9-Pb-FTm"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="jm8-xE-y47" secondAttribute="bottom" constant="-2" id="IYE-MN-r2F"/>
+                                <constraint firstAttribute="trailing" secondItem="jm8-xE-y47" secondAttribute="trailing" id="RoE-Uu-PDT"/>
+                                <constraint firstItem="jm8-xE-y47" firstAttribute="leading" secondItem="JjU-Op-e3v" secondAttribute="leading" id="s1F-72-eYS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="JjU-Op-e3v" secondAttribute="bottom" id="5Ga-El-EEC"/>
+                        <constraint firstItem="JjU-Op-e3v" firstAttribute="top" secondItem="ZB6-pW-UfR" secondAttribute="top" id="GrU-ST-uNU"/>
+                        <constraint firstAttribute="trailing" secondItem="JjU-Op-e3v" secondAttribute="trailing" id="MAh-9Z-nke"/>
+                        <constraint firstItem="JjU-Op-e3v" firstAttribute="leading" secondItem="ZB6-pW-UfR" secondAttribute="leading" id="bjs-6P-CFp"/>
+                    </constraints>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="5Ga-El-EEC"/>
+                            <include reference="GrU-ST-uNU"/>
+                            <include reference="MAh-9Z-nke"/>
+                            <include reference="bjs-6P-CFp"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZB6-pW-UfR" secondAttribute="bottom" id="8ig-37-a7j"/>
+                <constraint firstItem="ZB6-pW-UfR" firstAttribute="top" secondItem="9Kj-Dm-NOw" secondAttribute="top" id="Hpg-Lo-S6S"/>
+                <constraint firstAttribute="trailing" secondItem="ZB6-pW-UfR" secondAttribute="trailing" id="IZn-p2-1mg"/>
+                <constraint firstItem="ZB6-pW-UfR" firstAttribute="leading" secondItem="9Kj-Dm-NOw" secondAttribute="leading" id="cez-YQ-wri"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="horizontalMenu" destination="JjU-Op-e3v" id="VeU-Md-ePJ"/>
+            </connections>
+            <point key="canvasLocation" x="244" y="178.5"/>
+        </view>
+    </objects>
+</document>

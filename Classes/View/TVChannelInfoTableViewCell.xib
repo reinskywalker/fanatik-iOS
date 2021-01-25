@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVChannelInfoTableViewCell" rowHeight="97" id="KGk-i7-Jjw" customClass="TVChannelInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GANTENG-GANTENG SERING GATEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0hM-Fl-w9h" customClass="CustomBoldLabel">
+                        <rect key="frame" x="10" y="10" width="271" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Rlo-tW-0ru"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sungguh miris nasib kita sodara-sodara" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtW-76-vU1" customClass="CustomRegularLabel">
+                        <rect key="frame" x="10" y="37" width="300" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="rTU-BD-HCS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-pn-vYp">
+                        <rect key="frame" x="280" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="CYa-Uc-12B"/>
+                            <constraint firstAttribute="width" constant="40" id="cbF-zJ-LYx"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VvL-pn-vYp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="2DQ-c1-mY8"/>
+                    <constraint firstItem="VvL-pn-vYp" firstAttribute="leading" secondItem="0hM-Fl-w9h" secondAttribute="trailing" constant="-1" id="CE8-cv-vpR"/>
+                    <constraint firstItem="gtW-76-vU1" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-2" id="EQ1-JX-VIc"/>
+                    <constraint firstItem="gtW-76-vU1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="OLM-JJ-9aX"/>
+                    <constraint firstItem="0hM-Fl-w9h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="PHZ-se-fRq"/>
+                    <constraint firstItem="gtW-76-vU1" firstAttribute="top" secondItem="0hM-Fl-w9h" secondAttribute="bottom" constant="6" id="RVc-VS-nZj"/>
+                    <constraint firstItem="0hM-Fl-w9h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="fhx-if-Xf5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VvL-pn-vYp" secondAttribute="trailing" constant="-8" id="hZK-IQ-YjP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="downArrow" destination="VvL-pn-vYp" id="jzQ-i3-nXh"/>
+                <outlet property="liveDescriptionLabel" destination="gtW-76-vU1" id="unH-F7-WQf"/>
+                <outlet property="liveDescriptionLabelHeight" destination="rTU-BD-HCS" id="j0w-sp-hpP"/>
+                <outlet property="liveTitleLabel" destination="0hM-Fl-w9h" id="Uce-sz-Tgx"/>
+            </connections>
+            <point key="canvasLocation" x="207" y="167.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="downArrow" width="11" height="5"/>
+    </resources>
+</document>

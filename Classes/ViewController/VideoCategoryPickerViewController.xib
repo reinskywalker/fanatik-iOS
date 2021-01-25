@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoCategoryPickerViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="eE4-3k-xJT" id="yZV-fY-hHW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eE4-3k-xJT">
+                    <rect key="frame" x="0.0" y="169" width="600" height="353"/>
+                    <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eqt-eb-NRL"/>
+                        <outlet property="delegate" destination="-1" id="kBw-ih-f2P"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng7-2g-zJP">
+                    <rect key="frame" x="280" y="44" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="dYl-Ct-oWk"/>
+                        <constraint firstAttribute="width" constant="40" id="x68-3H-EKd"/>
+                    </constraints>
+                    <state key="normal" image="closeWhiteButton">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="w9u-cd-xmo"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SILAHKAN PILIH KATEGORI KAMU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCk-j4-Fye" customClass="CustomSemiBoldLabel">
+                    <rect key="frame" x="111" y="112" width="379" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="379" id="4Xf-sZ-EKe"/>
+                        <constraint firstAttribute="height" constant="14" id="JDv-Kx-sUh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eE4-3k-xJT" secondAttribute="trailing" id="5xZ-XY-6lf"/>
+                <constraint firstItem="YCk-j4-Fye" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="113" id="Fx1-cZ-pKk"/>
+                <constraint firstAttribute="bottom" secondItem="eE4-3k-xJT" secondAttribute="bottom" constant="78" id="Mco-4C-YMW"/>
+                <constraint firstAttribute="centerX" secondItem="YCk-j4-Fye" secondAttribute="centerX" id="Oj9-Yh-eb7"/>
+                <constraint firstAttribute="centerX" secondItem="Ng7-2g-zJP" secondAttribute="centerX" id="Zg5-p8-ZN2"/>
+                <constraint firstItem="eE4-3k-xJT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="akN-7z-DgH"/>
+                <constraint firstItem="eE4-3k-xJT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="169" id="rEp-Es-bq0"/>
+                <constraint firstItem="Ng7-2g-zJP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="u1j-fT-fl6"/>
+                <constraint firstItem="YCk-j4-Fye" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="112" id="zRB-8w-rZe"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Fx1-cZ-pKk"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeWhiteButton" width="20" height="20"/>
+    </resources>
+</document>

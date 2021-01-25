@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoSubCategoryViewController">
+            <connections>
+                <outlet property="heightOfHorizontalMenu" destination="dNj-Sd-FN3" id="DJh-Ww-fBT"/>
+                <outlet property="horizontalMenu" destination="gtO-lX-cU9" id="pap-d0-Z9i"/>
+                <outlet property="subCategoryTableView" destination="9uU-fH-9L8" id="Fvj-gz-7l8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9uU-fH-9L8">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hqG-l2-hgA"/>
+                        <outlet property="delegate" destination="-1" id="tXb-tc-hDS"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtO-lX-cU9" customClass="SwipeView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="0.0"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yu-mv-SMz">
+                            <rect key="frame" x="0.0" y="-1" width="600" height="1"/>
+                            <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Id9-JZ-sZ5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="dNj-Sd-FN3"/>
+                        <constraint firstAttribute="trailing" secondItem="0Yu-mv-SMz" secondAttribute="trailing" id="egH-s3-4md"/>
+                        <constraint firstAttribute="bottom" secondItem="0Yu-mv-SMz" secondAttribute="bottom" id="w5x-rF-FLL"/>
+                        <constraint firstItem="0Yu-mv-SMz" firstAttribute="leading" secondItem="gtO-lX-cU9" secondAttribute="leading" id="wGw-Uf-J3b"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ro3-sq-AX1"/>
+                        <outlet property="delegate" destination="-1" id="yF5-CN-xPi"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gtO-lX-cU9" secondAttribute="trailing" id="14U-BW-0KW"/>
+                <constraint firstItem="9uU-fH-9L8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Di-ai-9EB"/>
+                <constraint firstItem="gtO-lX-cU9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OLi-81-WLd"/>
+                <constraint firstAttribute="trailing" secondItem="9uU-fH-9L8" secondAttribute="trailing" id="SWx-NI-Wvg"/>
+                <constraint firstAttribute="bottom" secondItem="gtO-lX-cU9" secondAttribute="bottom" constant="499" id="aDZ-Wf-0bP"/>
+                <constraint firstItem="9uU-fH-9L8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="101" id="aL5-Mh-1zN"/>
+                <constraint firstItem="gtO-lX-cU9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="mp6-Ku-6XN"/>
+                <constraint firstAttribute="bottom" secondItem="9uU-fH-9L8" secondAttribute="bottom" id="nn5-fY-o16"/>
+                <constraint firstItem="9uU-fH-9L8" firstAttribute="top" secondItem="gtO-lX-cU9" secondAttribute="bottom" id="xcM-dr-usw"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="aL5-Mh-1zN"/>
+                    <exclude reference="aDZ-Wf-0bP"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
